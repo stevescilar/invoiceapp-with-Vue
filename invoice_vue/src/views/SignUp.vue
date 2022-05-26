@@ -21,7 +21,6 @@
                     <p v-for="error in errors" v-bind:key="error">
                         {{ error }}
                     </p>
-
                     </div>
                 </form>
             </div>
