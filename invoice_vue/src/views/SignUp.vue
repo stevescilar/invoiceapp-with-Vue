@@ -22,6 +22,13 @@
                         {{ error }}
                     </p>
                     </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <button class="is-success">Sign Up</button>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -29,7 +36,31 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { response } from 'express'
 export default{
-    name:'SignUp'
+    name:'SignUp',
+    data(){
+        return{
+            username: '',
+            password: '',
+            errors: []
+        }
+    },
+    methods:{
+        submitForm(e){
+            const formData = {
+                username: this.username,
+                password: this.password,
+            }
+            axios
+                .post("/api/v1/users/",formData)
+                .then(response => {
+                    console.log(response)
+
+                    this.$router.push('/log-in')
+                })
+        }
+    }
 }
 </script>
