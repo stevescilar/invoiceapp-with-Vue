@@ -17,6 +17,12 @@
                             <input type="password" name="password" id="" class="input" v-model="password">
                         </div>
                     </div>
+                    <div class="notification is-danger" v-if="errors.length">
+                    <p v-for="error in errors" v-bind:key="error">
+                        {{ error }}
+                    </p>
+
+                    </div>
                 </form>
             </div>
         </div>
