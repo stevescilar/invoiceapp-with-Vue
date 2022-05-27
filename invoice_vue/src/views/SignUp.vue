@@ -6,13 +6,13 @@
 
                 <form @submit.prevent="submitForm">
                     <div class="field">
-                        <label for="">E-mail</label>
+                        <label>E-mail</label>
                         <div class="control">
                             <input type="email" name="username" id="" class="input" v-model="username">
                         </div>
                     </div>
                     <div class="field">
-                        <label for="">Password</label>
+                        <label>Password</label>
                         <div class="control">
                             <input type="password" name="password" id="" class="input" v-model="password">
                         </div>
@@ -25,7 +25,7 @@
 
                     <div class="field">
                         <div class="control">
-                            <button class="is-success">Sign Up</button>
+                            <button class="button is-success">Sign Up</button>
                         </div>
                     </div>
 
@@ -37,7 +37,6 @@
 
 <script>
 import axios from 'axios'
-import { response } from 'express'
 export default{
     name:'SignUp',
     data(){
