@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <h3 class="title">Hi Welcome to  MyInvoice </h3>
+   <h3 class="title">MyInvoice</h3>
   </div>
 </template>
 
