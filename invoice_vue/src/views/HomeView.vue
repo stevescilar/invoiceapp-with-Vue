@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <h3 class="title">MyInvoice</h3>
+   <h3 class="title">MyInvoice App</h3>
    <p>Invoice your clients once-denmark</p>
   </div>
 </template>
