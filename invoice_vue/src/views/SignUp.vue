@@ -8,17 +8,19 @@
                     <div class="field">
                         <label>E-mail</label>
                         <div class="control">
-                            <input type="email" name="username" id="" class="input" v-model="username">
+                            <input type="email" name="username"  class="input" v-model="username">
                         </div>
                     </div>
                     <div class="field">
                         <label>Password</label>
                         <div class="control">
-                            <input type="password" name="password" id="" class="input" v-model="password">
+                            <input type="password" name="password"  class="input" v-model="password">
                         </div>
                     </div>
                     <div class="notification is-danger" v-if="errors.length">
-                    <p v-for="error in errors" v-bind:key="error">
+                    <p  v-for="error in errors" 
+                        v-bind:key="error"
+                    >
                         {{ error }}
                     </p>
                     </div>
@@ -40,17 +42,17 @@ import axios from 'axios'
 export default{
     name:'SignUp',
     data(){
-        return{
+        return {
             username: '',
             password: '',
             errors: []
         }
     },
-    methods:{
-        submitForm(e){
+    methods: {
+        submitForm (e) {
             const formData = {
                 username: this.username,
-                password: this.password,
+                password: this.password
             }
             axios
                 .post("/api/v1/users/",formData)
@@ -68,7 +70,7 @@ export default{
 
                     }else if (error.message){
                         console.log(JSON.stringify(error.message))
-                    }else {
+                    } else {
                         console.log(JSON.stringify(error))
                     }
                 })
